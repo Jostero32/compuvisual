@@ -3,8 +3,8 @@ require __DIR__ . '/vendor/autoload.php';
 
 use PHPJasper\PHPJasper;
 
-$input = '/Reportes/estudiantes.jasper';//'C:\\xampp\\htdocs\\cuarto\\reportes\\estudiantes.jasper';
-$output = '/Reportes/estudiantes';
+$input = 'Reportes/estudiantes.jasper';//'C:\\xampp\\htdocs\\cuarto\\reportes\\estudiantes.jasper';
+$output = 'Reportes/estudiantes';
 $options = [
     'format' => ['pdf'],
     'locale' => 'en',
@@ -17,7 +17,7 @@ $options = [
         'password'=>'Hrg52t4DDD6NhP/i12CgYV4Eg2l0YiTNt4W+vqZCSMA=',
         'port' => '3306'
     ],
-    'resources' => '/resources'
+    'resources' => 'resources'
 ];
 
 $jasper = new PHPJasper;
