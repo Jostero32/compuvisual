@@ -27,4 +27,21 @@ $jasper->process(
     $output,
     $options
 )->execute();
+
+
+$file = '/var/www/html/Reportes/estudiantes.pdf';
+
+if (file_exists($file)) {
+    // Establecer encabezados para indicar que es un archivo PDF
+    header('Content-Type: application/pdf');
+    header('Content-Disposition: attachment; filename="estudiantes.pdf"');
+    header('Content-Length: ' . filesize($file));
+
+    // Leer el archivo y enviarlo al navegador
+    readfile($file);
+    exit; // Asegúrate de que no se ejecute más código después de enviar el archivo
+} else {
+    echo 'El archivo no existe.';
+}
+
 ?>
