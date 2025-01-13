@@ -1,7 +1,7 @@
 <?php
 class Conexion{
     public function conectar(){
-        $servername ="db";
+        $servername ="mysql-compuvisual";
         $username = "root";
         $password = "1234";
         $db = "cuarto";
