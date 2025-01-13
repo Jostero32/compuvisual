@@ -26,6 +26,7 @@ $_SESSION['action'] = "servicios";
         <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyUser()">Eliminar</a>
         <a href="index.php?action=reporte&reporte=fpdf" class="easyui-linkbutton" iconCls="icon-remove" plain="true" ">Reporte Total</a>
         <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true"  onclick="reporte()">Reporte Seleccionado</a>
+        <a href="index.php?action=reporte&reporte=ireport" class="easyui-linkbutton" iconCls="icon-remove" plain="true" ">Reporte Ireport</a>
         ');
     }
     ?>

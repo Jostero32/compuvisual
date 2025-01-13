@@ -17,7 +17,7 @@ services:
   db:
     image: mysql:8.0
     container_name: mysql_db_visual
-    command: --default-authentication-plugin=mysql_native_password --init-file /docker-entrypoint-initdb.d/init.sql
+    command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_ROOT_PASSWORD: 1234
       MYSQL_DATABASE: cuarto

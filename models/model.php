@@ -5,8 +5,12 @@ class EnlacesPaginas{
         $module="views/".$enlacesModel.".php";
     }
     else if($enlacesModel=="reporte"){
-            $module="Reportes/".$_GET["reporte"].".php";
-    }
+            if($_GET["reporte"]=="fpdf"){
+                $module="Reportes/".$_GET["reporte"].".php";
+            }else{
+                $module="reporteireport.php";
+            }
+        }
     else{
             $module="views/inicio.php";
     }
