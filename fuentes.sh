@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Asegúrate de estar ejecutando este script como root o con privilegios de superusuario.
+
 # 1. Crear el directorio de caché de Fontconfig y darle permisos adecuados
 echo "Creando directorio de caché de Fontconfig..."
 mkdir -p /var/cache/fontconfig
@@ -14,8 +16,8 @@ echo "FONTCONFIG_PATH configurado."
 
 # 3. Instalar las fuentes de Microsoft (incluye Times New Roman)
 echo "Instalando fuentes de Microsoft..."
-sudo apt-get update
-sudo apt-get install -y ttf-mscorefonts-installer
+apt-get update
+apt-get install -y ttf-mscorefonts-installer
 echo "Fuentes de Microsoft instaladas."
 
 # 4. Verificar que la fuente 'Times New Roman' esté instalada
