@@ -3,21 +3,21 @@ require __DIR__ . '/vendor/autoload.php';
 
 use PHPJasper\PHPJasper;
 
-$input = 'C:\\xampp\\htdocs\\cuarto\\reportes\\estudiantes.jasper';
-$output = 'C:\\xampp\\htdocs\\cuarto\\reportes\\estudiantes';
+$input = '/Reportes/estudiantes.jasper';//'C:\\xampp\\htdocs\\cuarto\\reportes\\estudiantes.jasper';
+$output = '/Reportes/estudiantes';
 $options = [
     'format' => ['pdf'],
     'locale' => 'en',
     'params' => [],
-    'path_to_java' => 'C:\Program Files\Java\jre1.8.0_341\bin\java.exe',
     'db_connection' => [
         'driver' => 'mysql', // Corregido de 'msyql' a 'mysql'
-        'username' => 'root',
-        'host' => 'localhost',
-        'database' => 'cuarto',
+        'username' => 'mysql',
+        'host' => 'mysql-iomk',
+        'database' => 'mysql',
+        'password'=>'Hrg52t4DDD6NhP/i12CgYV4Eg2l0YiTNt4W+vqZCSMA=',
         'port' => '3306'
     ],
-    'resources' => 'C:\\xampp\\htdocs\\cuarto\\resources'
+    'resources' => '/resources'
 ];
 
 $jasper = new PHPJasper;
