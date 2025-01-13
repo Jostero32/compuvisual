@@ -7,15 +7,15 @@ if [ ! -d "fonts" ]; then
 fi
 
 # Crear directorio para fuentes personalizadas si no existe
-sudo mkdir -p /usr/share/fonts/truetype/custom
+mkdir -p /usr/share/fonts/truetype/custom
 
 # Copiar todos los archivos .ttf de la carpeta 'fonts' al directorio de fuentes personalizadas
 echo "Instalando fuentes..."
-sudo cp fonts/*.ttf /usr/share/fonts/truetype/custom/
+cp fonts/*.ttf /usr/share/fonts/truetype/custom/
 
 # Actualizar la caché de fuentes
 echo "Actualizando caché de fuentes..."
-sudo fc-cache -fv
+ fc-cache -fv
 
 # Verificar que las fuentes se hayan instalado correctamente
 echo "Verificando fuentes instaladas..."
