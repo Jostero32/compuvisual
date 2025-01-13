@@ -3,9 +3,8 @@ require __DIR__ . '/vendor/autoload.php';
 
 use PHPJasper\PHPJasper;
 
-$inputJrxml = __DIR__ . '/Reportes/estudiantes.jrxml';
 $inputJasper = __DIR__ . '/Reportes/estudiantes.jasper';
-$output = '/tmp/estudiantes';
+$output = __DIR__ . '/Reportes/estudiantes';
 
 $options = [
     'format' => ['pdf'],
@@ -24,8 +23,7 @@ $options = [
 
 $jasper = new PHPJasper;
 
-// Compilar siempre el archivo .jrxml
-$jasper->compile($inputJrxml)->execute();
+$jasper->process($inputJasper, $output, $options)->output();
 
 // Generar el reporte en PDF
 $jasper->process(
