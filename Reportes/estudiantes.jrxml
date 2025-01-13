@@ -4,7 +4,7 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<queryString>
-		<![CDATA[select * from estudiantes, cursos where estudiantes.curId=cursos.curId ]]>
+		<![CDATA[select * from estudiantes]]>
 	</queryString>
 	<field name="estCedula" class="java.lang.String">
 		<fieldDescription><![CDATA[]]></fieldDescription>
@@ -19,12 +19,6 @@
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
 	<field name="estDireccion" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="curId" class="java.lang.String">
-		<fieldDescription><![CDATA[]]></fieldDescription>
-	</field>
-	<field name="nombre" class="java.lang.String">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
 	<background>
@@ -56,11 +50,7 @@
 			</staticText>
 			<staticText>
 				<reportElement x="397" y="0" width="100" height="20" uuid="e287d878-edce-4943-adbc-0dfa8dde57dc"/>
-				<text><![CDATA[DIRECCIOIN]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="500" y="0" width="100" height="20" uuid="9a237c37-015c-4a8a-80c4-1224c1f319b0"/>
-				<text><![CDATA[NOMBRE]]></text>
+				<text><![CDATA[DIRECCION]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
@@ -85,10 +75,6 @@
 			<textField>
 				<reportElement x="400" y="0" width="100" height="20" uuid="247dec03-51a3-45ca-8c7e-75f2b96e42c0"/>
 				<textFieldExpression><![CDATA[$F{estDireccion}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="500" y="0" width="100" height="20" uuid="d7e90055-fac9-406f-867e-68e67631b175"/>
-				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
