@@ -52,3 +52,9 @@ footer{
 .parrafo2{
     color: aqua;
 }
+
+.grid-center {
+    display: grid;
+    place-items: center;
+    background-color: #ffffff;
+}

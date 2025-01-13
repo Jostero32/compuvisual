@@ -2,6 +2,7 @@
 $_SESSION['action'] = "servicios";
 ?>
 
+<div class="grid-center">
 <h2>Manejo de Estudiantes</h2>
 <table id="dg" title="Estudiantes" class="easyui-datagrid" style="width:700px;height:250px"
     url="models/obtener.php"
@@ -24,9 +25,9 @@ $_SESSION['action'] = "servicios";
             <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newUser()">Nuevo</a>
         <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editUser()">Editar</a>
         <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyUser()">Eliminar</a>
-        <a href="index.php?action=reporte&reporte=fpdf" class="easyui-linkbutton" iconCls="icon-remove" plain="true" ">Reporte Total</a>
-        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true"  onclick="reporte()">Reporte Seleccionado</a>
-        <a href="index.php?action=reporte&reporte=ireport" class="easyui-linkbutton" iconCls="icon-remove" plain="true" ">Reporte Ireport</a>
+        <a href="index.php?action=reporte&reporte=fpdf" class="easyui-linkbutton" iconCls="icon-print" plain="true" ">Reporte Total</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-print" plain="true"  onclick="reporte()">Reporte Seleccionado</a>
+        <a href="index.php?action=reporte&reporte=ireport" class="easyui-linkbutton" iconCls="icon-print" plain="true" ">Reporte Ireport</a>
         ');
     }
     ?>
@@ -59,6 +60,9 @@ $_SESSION['action'] = "servicios";
     <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="saveUser()" style="width:90px">Guardar</a>
     <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')" style="width:90px">Cancelar</a>
 </div>
+</div>
+
+
 <script type="text/javascript">
     var url;
 
