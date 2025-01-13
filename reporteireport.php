@@ -3,55 +3,48 @@ require __DIR__ . '/vendor/autoload.php';
 
 use PHPJasper\PHPJasper;
 
-$basePath = __DIR__ . '/Reportes/';  // Directorio base donde están los archivos .jrxml y .jasper
-$inputJrxml = $basePath . 'estudiantes.jrxml';  // Archivo JRXML
-$inputJasper = $basePath . 'estudiantes.jasper';  // Archivo Jasper
-$output = '/tmp/estudiantes';  // Ruta donde se guardará el archivo PDF generado
-$pdfFile = '/var/www/html/Reportes/estudiantes.pdf';  // Ruta final para guardar el archivo PDF generado
+$inputJrxml = __DIR__ . '/Reportes/estudiantes.jrxml';
+$inputJasper = __DIR__ . '/Reportes/estudiantes.jasper';
+$output = '/tmp/estudiantes';
 
-// Verifica si el archivo .jasper ya está compilado, si no lo compila
-if (!file_exists($inputJasper)) {
-    echo "Compilando el archivo JRXML a Jasper...\n";
-    $jasper = new PHPJasper;
-    $jasper->compile($inputJrxml)->execute();
-}
-
-// Opciones de configuración
 $options = [
     'format' => ['pdf'],
     'locale' => 'en',
     'params' => [],
     'db_connection' => [
-        'driver' => 'mysql', // Corregido de 'msyql' a 'mysql'
+        'driver' => 'mysql',
         'username' => 'mysql',
         'host' => 'mysql-iomk',
         'database' => 'mysql',
         'password' => 'Hrg52t4DDD6NhP/i12CgYV4Eg2l0YiTNt4W+vqZCSMA=',
         'port' => '3306'
     ],
-    'resources' => $basePath . 'resources'  // Ruta a los recursos
+    'resources' => __DIR__ . '/Reportes/images'
 ];
 
-// Procesar el reporte
 $jasper = new PHPJasper;
 
+// Compilar siempre el archivo .jrxml
+$jasper->compile($inputJrxml)->execute();
+
+// Generar el reporte en PDF
 $jasper->process(
-    $inputJasper,  // Usamos el archivo compilado .jasper
+    $inputJasper,
     $output,
     $options
 )->execute();
 
-// Verifica si el archivo PDF existe después de procesarlo
-if (file_exists($pdfFile)) {
+$file = $output . '.pdf';
+
+if (file_exists($file)) {
     // Establecer encabezados para indicar que es un archivo PDF
     header('Content-Type: application/pdf');
     header('Content-Disposition: attachment; filename="estudiantes.pdf"');
-    header('Content-Length: ' . filesize($pdfFile));
+    header('Content-Length: ' . filesize($file));
 
     // Leer el archivo y enviarlo al navegador
-    readfile($pdfFile);
-    exit;  // Asegúrate de que no se ejecute más código después de enviar el archivo
+    readfile($file);
+    exit;
 } else {
-    echo 'El archivo PDF no existe.';
+    echo 'El archivo no existe.';
 }
-?>
