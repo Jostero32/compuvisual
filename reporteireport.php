@@ -4,7 +4,7 @@ require __DIR__ . '/vendor/autoload.php';
 use PHPJasper\PHPJasper;
 
 $input = '../../../../../../Reportes/estudiantes.jasper';//'C:\\xampp\\htdocs\\cuarto\\reportes\\estudiantes.jasper';
-$output = '/var/www/html/Reportes/estudiantes';
+$output = '/tmp/estudiantes';
 $options = [
     'format' => ['pdf'],
     'locale' => 'en',
