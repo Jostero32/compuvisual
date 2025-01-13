@@ -17,7 +17,7 @@ $options = [
         'password'=>'Hrg52t4DDD6NhP/i12CgYV4Eg2l0YiTNt4W+vqZCSMA=',
         'port' => '3306'
     ],
-    'resources' => 'resources'
+    'resources' => '../../../../../../resources'
 ];
 
 $jasper = new PHPJasper;
