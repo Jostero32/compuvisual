@@ -43,7 +43,7 @@
             ?>
     
 
-    <footer> derechos reservados by @yo</footer>
+    <footer> Derechos Reservados UTA®</footer>
 
     
 </body>
