@@ -234,7 +234,7 @@ $_SESSION['action'] = "nosotros";
                 <div class="highlight-box">
                     <section class="profile">
                         <div class="info">
-                            <h2>Jhonatan Lozada</h2>
+                            <h2>Jonathan Lozada</h2>
                             <button id="toggleButton3" onclick="toggleInfo(3)">Mostrar más información</button>
                             <div id="moreInfo3" style="display: none;">
                                 <p><strong>Pasatiempos:</strong>
@@ -280,12 +280,12 @@ $_SESSION['action'] = "nosotros";
                             <h2>Christian Sanchez</h2>
                             <button id="toggleButton6" onclick="toggleInfo(6)">Mostrar más información</button>
                             <div id="moreInfo6" style="display: none;">
-                                <p><strong>Pasatiempos:</strong>Programar</p>
+                                <p><strong>Pasatiempos:</strong>Jugar fútbol, Programar</p>
                                 <p><strong>Lenguaje de Programación Favorito:</strong> Java</p>
-                                <p><strong>Edad:</strong> </p>
+                                <p><strong>Edad:</strong> 23</p>
                                 <p><strong>Originario de:</strong> Ambato</p>
-                                <p><strong>Estudios:</strong> </p>
-                                <p><strong>GitHub:</strong> <a href=""
+                                <p><strong>Estudios:</strong> Universidad Técnica de Ambato </p>
+                                <p><strong>GitHub:</strong> <a href="https://github.com/0AalL"
                                         target="_blank">Perfil de GitHub</a></p>
                             </div>
                         </div>

@@ -13,7 +13,7 @@
             </div>
 
             <div class="d-grid">
-                <button type="submit" class="btn btn-primary">Entrar</button>
+                <button type="submit" class="btn btn-secondary">Entrar</button>
             </div>
         </form>
         <?php if (isset($_GET["error"])): ?>
